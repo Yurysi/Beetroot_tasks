@@ -7,7 +7,11 @@
 
 
 def choose_func(nums: list, func1, func2):
-    if func2(nums) == nums:
+    k = 0
+    for num in nums:
+       if num > 0:
+           k +=1
+    if k == len(nums):
         print(func1(nums))
     else:
         print(func2(nums))
