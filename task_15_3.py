@@ -33,11 +33,11 @@ class TvController:
 
     def first_channel(self):
         self.choosen_channel = self.channels[0]
-        return print('First channel:', self.choosen_channel)
+        return self.choosen_channel
 
     def last_channel(self):
         self.choosen_channel = self.channels[-1]
-        return print('Last channel:', self.choosen_channel)
+        return self.choosen_channel
 
     def turn_channel(self, u_value):
         self.u_value = u_value
