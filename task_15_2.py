@@ -8,13 +8,12 @@ Make __init__() which takes values for a dog’s age. Then create a method
 
 
 class Dog():
-    def __init__(self, age_factor):
-        self.age_factor = age_factor
-        self.human_equivalent(age_factor)
+    age_factor = 0
 
     def human_equivalent(self, age_factor):
         self.age_factor = age_factor * 7
         print(f"Your dog have {self.age_factor} age in human equivalent.")
 
 
-Dog(5)
+pet = Dog()
+pet.human_equivalent(4)
