@@ -45,9 +45,9 @@ class TvController:
             self.choosen_channel = self.channels[int(self.u_value) - 1]
             return self.choosen_channel
         except IndexError:
-            print(f'I have only {len(self.channels)} channels')
+            return f'I have only {len(self.channels)} channels'
         except ValueError:
-            print('Please enter numbers.')
+            return 'Please enter numbers.'
 
     def next_channel(self):
         num = self.channels.index(self.choosen_channel) + 1
@@ -68,40 +68,40 @@ class TvController:
             return self.choosen_channel
 
     def current_channel(self):
-        return print(self.choosen_channel)
+        return self.choosen_channel
 
     def is_exist(self, any_value):
         try:
             any_value = int(any_value)
             try:
                 if self.channels[any_value - 1]:
-                    print('Yes')
+                    return 'Yes'
             except:
-                print("No")
+                return "No"
 
         except:
             if any_value in self.channels:
-                print('Yes')
+                return 'Yes'
             elif any_value.upper() in self.channels:
-                print('Yes')
+                return 'Yes'
             elif any_value.title() in self.channels:
-                print("Yes")
+                return 'Yes'
             else:
-                print('No')
+                return 'No'
 
 
 controller = TvController(channels)
-controller.first_channel()
+print(controller.first_channel())
 
-controller.last_channel()
+print(controller.last_channel())
 
-controller.turn_channel(1)
-controller.next_channel()
+print(controller.turn_channel(1))
+print(controller.next_channel())
 
-controller.previous_channel()
+print(controller.previous_channel())
 
-controller.current_channel()
+print(controller.current_channel())
 
-controller.is_exist(4)
+print(controller.is_exist(4))
 
-controller.is_exist("BBC")
+print(controller.is_exist("discovery"))
