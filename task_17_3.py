@@ -76,6 +76,13 @@ class Fraction:
         else:
             return False
 
+    def __eq__(self, otherfraction):
+        num1 = self.top / self.bottom
+        num2 = otherfraction.top / otherfraction.bottom
+        if num1 == num2:
+            return True
+        else:
+            return False
     def __str__(self):
         return f"Now the number is {self.top}/{self.bottom}"
 
@@ -83,5 +90,5 @@ class Fraction:
 if __name__ == "__main__":
     x = Fraction(1, 2)
     y = Fraction(1, 4)
-    # print(x + y == Fraction(3, 4))  # x <= y
-    print(x <= y)
+    print(x + y == Fraction(3, 4))  # x <= y
+    print(x + y)
